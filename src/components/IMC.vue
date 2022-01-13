@@ -98,8 +98,10 @@ export default {
         this.toast('Preencha todos os campos!');
         return;
       }
+      let peso = this.formatNumber(this.peso);
+      let altura = this.formatNumber(this.altura);
 
-      if(isNaN(this.altura) || isNaN(this.peso)) {
+      if(isNaN(altura) || isNaN(peso)) {
         this.mostrarResultado = false;
         this.calcular = false;
         this.toast('Altura e Peso devem ser números!');
@@ -109,8 +111,6 @@ export default {
       this.calcular = true;
       this.mostrarResultado = false;
       this.mostrarInformcoes = false;
-      let peso = this.formatNumber(this.peso);
-      let altura = this.formatNumber(this.altura);
       
       let imc = peso / (altura * altura);
       this.imc = imc.toFixed(2);
