@@ -1,8 +1,8 @@
 <template>
   <div class="page-content">
     <div class="title">
-      Calcule o seu IMC <br>
-      <span class="span">Índice de massa corporal.</span>
+      Calcule o IMC, Gabriele <br>
+      <span class="span">Para Gabriele saber se está magrinha ou gordinha.</span>
     </div>
 
     <b-field label="Altura" message="(ex.: 1,75)">
@@ -37,14 +37,14 @@
             </p>
             <section>
               <b-button
-                  label="Entenda o IMC"
+                  label="Ver a tabela do IMC"
                   @click="mostrarInformcoes = !mostrarInformcoes" 
                   type="is-primary"/>
 
               <br>
               <br>
               <b-message 
-                  title="IMC (Índice de Massa Corporal))" 
+                  title="IMC (Índice de Massa Corporal)" 
                   v-model="mostrarInformcoes"
                   type="is-primary"
                   aria-close-label="Close message"
@@ -80,8 +80,8 @@ export default {
         }
       ],
       data: [
-        { class: 'Abaixo do Peso', pont: 'Menor que 18.5' },
-        { class: 'Peso Normal', pont: 'Entre 18.5 e 24,9' },
+        { class: 'Abaixo do Peso', pont: 'Menor que 18,5' },
+        { class: 'Peso Normal', pont: 'Entre 18,5 e 24,9' },
         { class: 'Sobrepeso', pont: 'Entre 25 e 29,9' },
         { class: 'Obesidade Grau I', pont: 'Entre 30 e 34,9' },
         { class: 'Obesidade Grau II', pont: 'Entre 35 e 39,9' },
